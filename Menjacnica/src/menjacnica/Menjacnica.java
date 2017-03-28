@@ -27,7 +27,6 @@ public class Menjacnica implements MenjacnicaInterfejs {
 	public void obrisiDnevniKurs(GregorianCalendar datum) {
 		for (int i = 0; i < dnevniKursevi.size(); i++) {
 			DnevniKurs temp = dnevniKursevi.get(i);
-
 			if (temp.getDatum().equals(datum)) {
 				dnevniKursevi.remove(i);
 				return;
