@@ -10,6 +10,8 @@ public class Valuta {
 	}
 
 	public void setValuta(String valuta) {
+		if (valuta == null || valuta.isEmpty())
+			throw new RuntimeException("Nevalidan naziv valute");
 		this.valuta = valuta;
 	}
 
@@ -18,6 +20,8 @@ public class Valuta {
 	}
 
 	public void setSkracenica(String skracenica) {
+		if (skracenica == null || skracenica.isEmpty() || skracenica.length() > 3)
+			throw new RuntimeException("Nevalidna skracenica valute");
 		this.skracenica = skracenica;
 	}
 

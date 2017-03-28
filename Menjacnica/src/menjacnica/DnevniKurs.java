@@ -15,6 +15,8 @@ public class DnevniKurs {
 	}
 
 	public void setValuta(Valuta valuta) {
+		if (valuta == null)
+			throw new RuntimeException("Null valuta");
 		this.valuta = valuta;
 	}
 
@@ -23,6 +25,8 @@ public class DnevniKurs {
 	}
 
 	public void setDatum(GregorianCalendar datum) {
+		if (datum == null)
+			throw new RuntimeException("Null datum");
 		this.datum = datum;
 	}
 
@@ -31,6 +35,8 @@ public class DnevniKurs {
 	}
 
 	public void setProdajni(double prodajni) {
+		if (prodajni < 0)
+			throw new RuntimeException("Prodajni kurs manji od 0");
 		this.prodajni = prodajni;
 	}
 
@@ -39,6 +45,8 @@ public class DnevniKurs {
 	}
 
 	public void setKupovni(double kupovni) {
+		if (kupovni < 0)
+			throw new RuntimeException("Kupovni kurs manji od 0");
 		this.kupovni = kupovni;
 	}
 
@@ -47,6 +55,8 @@ public class DnevniKurs {
 	}
 
 	public void setSrednji(double srednji) {
+		if (srednji < 0)
+			throw new RuntimeException("Srednji kurs manjni od 0");
 		this.srednji = srednji;
 	}
 
